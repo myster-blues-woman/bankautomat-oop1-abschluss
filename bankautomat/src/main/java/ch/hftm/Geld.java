@@ -43,4 +43,22 @@ public class Geld {
         return new VergleicheBetragAbsteigend();
     }
 
+    @Override
+    public String toString() {
+        return "Geld{" + "wert=" + wert + ", anzahl=" + anzahl + ", gesamt=" + gesamt + '}';
+    }
+}
+
+class VergleicheBetragAbsteigend implements Comparator<Geld> {
+    @Override
+    public int compare(Geld r1, Geld r2) {
+        return r2.getWert() - r1.getWert();
+    }
+}
+
+class VergleicheBetragAufsteigend implements Comparator<Geld> {
+    @Override
+    public int compare(Geld r1, Geld r2) {
+        return r1.getWert() - r2.getWert();
+    }
 }

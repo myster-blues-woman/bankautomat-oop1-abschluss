@@ -15,6 +15,7 @@ public class Karte {
     private int pinNr;
     private double kartenstand;
     private int kartenlimit;
+    private int blockiert;
 
     public Karte() {
     }
@@ -129,5 +130,55 @@ public class Karte {
 
     public void setPinNr(int pinNr) {
         this.pinNr = pinNr;
+    }
+
+    public boolean isBlockiert() {
+        boolean istBlockiert = true;
+        if (blockiert == 0) {
+            istBlockiert = false;
+        }
+        return istBlockiert;
+    }
+
+    public void setBlockiert() {
+        this.blockiert = 1;
+    }
+
+    public String dateToString(Date datum) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM/yy");
+        String strDatum = dateFormat.format(datum);
+        return strDatum;
+    }
+
+    public Date stringToDate(String strDatum) {
+        try {
+            return new SimpleDateFormat("MM/yy").parse(strDatum);
+        } catch (Exception ex) {
+
+        }
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return "Kartennummer: " + kartennummer + ", IBAN: " + iban;
+    }
+
+    public String[] toArray() {
+        String[] daten = {
+                String.valueOf(kartenId),
+                vorname,
+                nachname,
+                kontoname,
+                iban,
+                bankname,
+                String.valueOf(kartennummer),
+                this.dateToString(ablaufdatum),
+                String.valueOf(pinNr),
+                String.valueOf(kartenstand),
+                String.valueOf(kartenlimit),
+                String.valueOf(blockiert)
+        };
+        return daten;
     }
 }

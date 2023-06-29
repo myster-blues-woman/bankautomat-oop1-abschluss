@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="277.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.hftm.LoginController">
+    <children>
+        <Label layoutX="34.0" layoutY="47.0" text="Bankautomat">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="53.0" layoutY="117.0" text="Kartennummer:" />
+        <Label layoutX="53.0" layoutY="167.0" text="PIN:" />
+        <TextField fx:id="pinTextField" layoutX="160.0" layoutY="163.0" />
+        <Button fx:id="einloggenButton" layoutX="158.0" layoutY="208.0" mnemonicParsing="false" onAction="#einloggenButtonClicked" text="Einloggen" />
+        <ComboBox fx:id="kartenAuswahlComboBox" layoutX="160.0" layoutY="113.0" prefWidth="150.0" />
+      <Label fx:id="labelMainLogin" layoutX="50.0" layoutY="245.0" />
+      <Button fx:id="neuKarteButton" layoutX="354.0" layoutY="113.0" mnemonicParsing="false" onAction="#neuKarteButtonClicked" prefHeight="26.0" prefWidth="108.0" text="Neue Karte" />
+      <Separator layoutX="336.0" layoutY="39.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Button fx:id="löschenKarteButton" layoutX="354.0" layoutY="155.0" mnemonicParsing="false" onAction="#löschenKarteButtonClicked" prefHeight="25.0" prefWidth="108.0" text="Karte Löschen" />
+    </children>
+</AnchorPane>

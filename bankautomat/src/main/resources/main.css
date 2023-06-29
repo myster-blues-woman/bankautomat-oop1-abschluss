@@ -1,5 +1,15 @@
-.root {
-    -fx-font-size: 14px;
-    -fx-font-family: sans-serif;
-    -fx-background-color: #ffffff;
+
+
+#karteGespeichertLabel {
+    -fx-text-fill: green;
+}
+#btnEnter {
+    -fx-background-color: green;
+}
+#btnKorrektur {
+    -fx-background-color: yellow;
+}
+
+#btnAbbruch {
+    -fx-background-color: red;
 }
